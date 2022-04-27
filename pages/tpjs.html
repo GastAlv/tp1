@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp js</title>
+</head>
+<body>
+    <h5>Ejercicio 1</h5>
+    
+    <label for="ej1_n1">Numero 1</label>
+    <input type="number" id = "ej1_n1">
+        
+    <label for="ej1_n2">Numero 2</label>
+    <input type="number" id = "ej1_n2">
+    
+    <label for="ej1_n3">Numero 3</label>
+    <input type="number" id = "ej1_n3">
+
+    <button onclick="func_ej1()">Comparar</button>
+    
+    <input type="text" id="ej1_resultado">
+
+    <script>
+        function func_ej1(){
+            let ej1_n1 = parseFloat(document.getElementById("ej1_n1").value);
+            let ej1_n2 = parseFloat(document.getElementById("ej1_n2").value);
+            let ej1_n3 = parseFloat(document.getElementById("ej1_n3").value);
+            
+            if (ej1_n1 > ej1_n2 && ej1_n1 > ej1_n3) {
+            
+                document.getElementById("ej1_resultado").value = "Valor 1 es el mayor";
+
+            }
+            
+            if (ej1_n2 > ej1_n1 && ej1_n2 > ej1_n3) {
+
+                document.getElementById("ej1_resultado").value = "Valor 2 es el mayor";
+     
+            }
+           
+            if (ej1_n3 > ej1_n1 && ej1_n3 > ej1_n2) {
+
+                document.getElementById("ej1_resultado").value = "Valor 3 es el mayor";
+               
+            }
+
+        }       
+    </script>
+
+    <h5>Ejercicio 2</h5>
+    <label for="ej2_n1">Ingrese el primer numero</label>
+    <input type="number" id="ej2_n1">
+
+    <label for="ej2_n2">Ingrese el segundo numero</label>
+    <input type="number" id="ej2_n2">
+
+    <button onclick="func_ej2()">Sumar</button>
+    <input type="text" id="ej2_resultado">
+
+    <script>
+        function func_ej2(){
+            let ej2_n1 = parseFloat(document.getElementById("ej2_n1").value);
+            let ej2_n2 = parseFloat(document.getElementById("ej2_n2").value);
+            
+            const suma = ej2_n1 + ej2_n2
+
+            document.getElementById("ej2_resultado").value = suma
+
+        }
+        
+       
+    </script>
+
+    <!-- <h5>Ejercicio 3</h5>
+
+    <label for="ej3_n1">Ingrese la cantidad de veces que desea repetir la palabra</label>
+    <input type="number" id="ej3_n1">
+    
+    <label for="ej3_palabra">Ingrese la palabra</label>
+    <input type="text" id="ej3_palabra">
+
+    <button onclick="func_ej3()"></button>
+    <input type="text" id="ej3_resultado">
+
+    <script>
+        function func_ej3(){
+            let ej3_n1 = parseInt(document.getElementById("ej3_n1").value);
+            let ej3_palabra = document.getElementById(ej3_palabra).value;
+
+            const suma = ej3_n1 * ej3_palabra
+
+            docuement.getElementById("ej3_resultado").value = suma
+
+        }
+    </script> -->
+    <h5>Ejercicio 3</h5>
+    <label for="ej3_palabra">Palabra:</label>
+    <input type="text" id="ej3_palabra">
+
+    <label for="ej3_c2">Cantidad:</label>
+    <input type="number" id="ej3_n1">
+
+    <button onclick="func_for()">Comparar</button>
+    <label for="ej3_resultado">Resultado:</label>
+
+    <input type="text" id="ej3_resultado">                    
+    
+    
+    
+    <script>
+        function func_for(){
+            let ej3_palabra = (document.getElementById("ej3_palabra").value);
+            let ej3_n1 = parseFloat(document.getElementById("ej3_n1").value);
+    
+            for (x = 0; x <= ej3_n1; x++){
+            document.getElementById("ej3_resultado").value = ej3_palabra;}
+        }
+    </script>
+</body>
+</html>

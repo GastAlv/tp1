@@ -113,10 +113,17 @@
         function func_for(){
             let ej3_palabra = (document.getElementById("ej3_palabra").value);
             let ej3_n1 = parseFloat(document.getElementById("ej3_n1").value);
-    
-            for (x = 0; x <= ej3_n1; x++){
-            document.getElementById("ej3_resultado").value = ej3_palabra;}
+            frase = ""
+            for (x = 0; x < ej3_n1; x++){
+            
+                frase = frase + ej3_palabra
         }
+        
+        document.getElementById("ej3_resultado").value = frase
+
+        }
+
+        
     </script>
 </body>
 </html>

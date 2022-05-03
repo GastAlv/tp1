@@ -123,7 +123,180 @@
 
         }
 
-        
     </script>
+
+    <h5>Ejercicio 4</h5>
+
+    <label for="ej4_grados"></label>
+    <input type="text" id="ej4_grados">
+
+    <label for="ej4_grados_f"></label>
+    <input type="text" id="ej4_grados_f">
+
+    <button onclick="func_convert()">Convert</button>
+    <label for="ej4_resultado"> Resultado:</label>
+
+    <input type="text" id="ej4_resultado">
+
+    <script>
+        function func_convert(){
+            let ej4_grados = parseFloat(document.getElementById("ej4_grados").value);
+            let ej4_grados_f = parseFloat(document.getElementById("ej4_grados_f").value);
+                        
+            const convertidor_c = (ej4_grados * (9/5) + 32)
+
+            const convertidor_f = (ej4_grados_f - 32) * (5/9)
+
+            document.getElementById("ej4_resultado").value = convertidor_c
+            document.getElementById("ej4_resultado").value = convertidor_f
+            
+        }
+    </script>
+
+    <h5>Ejercicio 5</h5>
+
+    <label for="ej5_palabra"></label>
+    <input type="text" id="ej5_palabra">
+
+    <button onclick="func_contador()">Contar</button>
+    <label for="ej5_resultado"></label>
+
+    <input type="text" id="ej5_resultado">
+    
+    <script>
+        function func_contador(){
+            const palabra = document.getElementById("ej5_palabra").value;
+            const cantidad = palabra.length;
+            
+            document.getElementById("ej5_resultado").value = cantidad
+        }
+    </script>
+
+    <h5>Ejercicio 6</h5>
+    
+    <label for="ej6_n1">Ingrese un numero</label>
+    <input type="number" id="ej6_n1">
+    
+  
+    <button onclick="func_par()">Par o Impar</button>
+   
+    <p id="ej6_resultado"></p>
+
+    <script>
+        function func_par(){
+            let resultado = document.getElementById("ej6_resultado");
+            const numero = document.getElementById("ej6_n1").value;        
+            const valor = numero % 2;
+            
+            if (valor === 0) {
+                resultado.textContent = `El numero ${numero} es par`
+            } else {
+                resultado.textContent = `El numnero ${numero} es impar`
+            }
+        }
+    </script>
+
+    <h5>Ejercicio 7</h5>
+
+    <label for="ej7_n1">Ingrese un numero</label>
+    <input type="number" id="ej7_n1">
+
+    <label for="ej7_n2">Ingrese un numero</label>
+    <input type="number" id="ej7_n2">
+
+    <button onclick="func_multiplos3()">Mostrar multiplos</button>
+    <!-- <p id="ej7_resultado"></p> -->
+
+    <script>
+        function func_multiplos3(){
+            const num1 = document.getElementById("ej7_n1").value;
+            const num2 = document.getElementById("ej7_n2").value;
+            //const multiplos = document.getElementById("ej7_resultado")
+
+
+            if (num1 > num2) {
+                mayor = num1;
+                menor = num2;               
+            } else {
+                mayor = num2;
+                menor = num1;
+            }
+            
+            while (menor <= mayor) {
+                const calculo = menor % 3;
+                if (calculo === 0) {
+                    //multiplos.textContent = `Es ${menor} multiplo de 3 `
+                    alert(`Es ${menor} multiplo de 3 `)                    
+                }
+                menor++;                       
+            }
+        }
+    </script>
+
+    <h5>Ejercicio 8</h5>
+
+    <label for="ej8_num1">Numero 1:</label>
+    <input type="number" id="ej8_num1">
+
+    <button onclick="func_primos()">Mostrar</button>
+
+    <script>
+        function func_primos(){
+
+            let num1 = document.getElementById("ej8_num1").value;
+            //let resultado = document.getElementById("ej8_resultado");
+
+            for (let i = 2; i < num1; i++) {
+                if (num1 % i === 0) {
+                    return false
+                }
+                return true
+            }
+            
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+        
+        document.write
+        }
+    </script>
+
+
+<h5>Ejercicio 9</h5>
+    
+    <label for="ej8_nombre">Ingrese el nombre:</label>
+    <input type="text" id="ej8_nombre">
+
+    <label for="ej8_apellido">Ingrese el apellido:</label>
+    <input type="text" id="ej8_apellido">
+
+    <label for="ej8_edad">Ingrese la edad:</label>
+    <input type="text" id="ej8_edad">
+
+    <label for="ej8_ciudad">Ingrese la ciudad:</label>
+    <input type="text" id="ej8_ciudad">
+
+    <button onclick="func_datos()">Verificar</button>
+    <p id="ej8_datos"></p>
+
+    <script>
+        function func_datos(){
+            
+            let nombre = document.getElementById("ej8_nombre").value;
+            let apellido = document.getElementById("ej8_apellido").value;
+            let edad = document.getElementById("ej8_edad").value;
+            let ciudad = document.getElementById("ej8_ciudad").value;
+            resultado = document.getElementById("ej8_datos");
+
+            resultado.textContent = `Mi nombre es ${nombre} ${apellido}, tengo ${edad} años. Nací en la ciudad de ${ciudad}`;
+
+        }
+    </script>
+
+    <h5>Ejercicio 10</h5>
+
+
+
 </body>
 </html>

@@ -115,12 +115,24 @@ function func_multiplos3(){
 }
 
 // Funcion numeros primos
+const func_primos = () => {
+const num1 = document.getElementById("ej8_num1").value * 1;
+const resultado = document.getElementById("resultado_ej8");
+resultado.textContent = "";
 
-function func_primos(){
+    const esPrimo = (num) => {
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+            return false;
+            }
+            return true;
+        }
+    };
+    for (let x = 0; x <= num1; x++) {
+        esPrimo(x) && (resultado.textContent = resultado.innerHTML + " | " + x);
+    }
+};
 
-    
-
-}
 
 // Mostrar datos en pantalla
 function func_datos(){
@@ -135,3 +147,18 @@ function func_datos(){
 
 }
 
+funcion10 = () => {
+    num1 = document.getElementById("ej10_num1").value * 1,
+    num2 = document.getElementById("ej10_num2").value * 1,
+    resultado = document.getElementById("resultado_ej10");
+    resultado.textContent = "";
+  
+    let menor = Math.min(num1, num2);
+    let mayor = Math.max(num1, num2);
+  
+    for (let x = 0; x <= mayor; x++) {
+      if (x > menor && x < mayor) {
+        resultado.textContent = resultado.innerHTML + " | " + x;
+      }
+    }
+  };
